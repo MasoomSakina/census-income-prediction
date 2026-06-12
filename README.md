@@ -22,20 +22,27 @@ This project focuses on data loading, quality inspection, and binary classificat
 - Standardized character-based missing value placeholders (`'?'`) into numeric Python `NaN` formats.
 - Handled high-sparsity features and applied statistical mode imputation to fill missing fields safely based on training distributions.
 
-### 3. Exploratory Data Analysis (EDA)
-To understand data distributions before modeling, the following visual checks were implemented:
-1. **Target Class Imbalance:** Checked the distribution of the income targets.
-2. **Feature Distributions:** Evaluated the scale and skewness of continuous variables like `age` and `wage_per_hour`.
-3. **Correlation Matrix Heatmap:** Assessed multi-frequency linear relationships across numeric features to check for collinearity.
+### 3. Exploratory Data Analysis (EDA) & Optimization
+To understand data distributions and evaluate performance, multiple diagnostic visual checks were implemented across the pipeline.
 
 ---
 
 ## 📊 Visual Results
 
-### Class Distribution
-Below is the visual overview of the class distributions from our analysis:
+### 1. Exploratory Data Analysis Diagnostics
+We analyzed the dataset structural health across four key layouts: target class imbalance distributions, continuous input skewness attributes, bivariate target associations, and feature collinearity check matrices.
 
-![Class Distribution](visuals/class_distribution.png)
+![Exploratory Data Analysis Diagnostics](visuals/EDA%20charts.png)
+
+### 2. Hyperparameter Tuning & Convergence
+Shows the iterative optimization validation curve tracing ensemble parameter search performance.
+
+![Ensemble Optimization Curve](visuals/Ensemble%20Optimization%20curve.png)
+
+### 3. Model Evaluation Matrix
+The final predictive performance checked against unseen test configurations using an optimized LightGBM matrix layout.
+
+![Final Optimization LightGMB Matrix](visuals/Final%20Optimization%20LightGMB.png)
 
 ---
 
